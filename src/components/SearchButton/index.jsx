@@ -116,8 +116,8 @@ function SearchButton() {
                     :
                     <>
                         <h1 className="titleCarousel"> {`Exibindo os 10 resultados mais recentes para #${word}`} </h1>
-                        <CarouselComponent props={{ images, author, data }} />
-                        <PostComponent props={{word, text, users}} />
+                        <CarouselComponent data-testid="data-Carousel" props={{ images, author, data }} />
+                        <PostComponent data-testid="data-Post" props={{word, text, users}} />
                     </>
                 }
             </>
