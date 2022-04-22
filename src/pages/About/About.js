@@ -51,7 +51,7 @@ export default class About extends Component {
                     <div className="whatIsInfo">
                         <h2 className="whatIsTitle">O que é</h2>
                         <div className="whatIsText">
-                            <p >
+                            <p data-testid="about-data-test">
                             {this.state.about}
                             </p>
                         </div>
@@ -65,7 +65,8 @@ export default class About extends Component {
                     <div className="peopleContainer"> 
 
                         { this.state.isLoaded ? this.state.squadInfo.map((item) =>                         
-                                                            <PersonCard personImage={item.fields.Imagem[0].url} personName={item.fields.Nome}
+                                                            <PersonCard  personImage={item.fields.Imagem[0].url} personName={item.fields.Nome}
+                                                            data-testid="person-info-container"
                                                             personEmail={item.fields.Email}
                                                             personLinkedin={item.fields.LinkedIn}
                                                             personGithub={item.fields.Github}
